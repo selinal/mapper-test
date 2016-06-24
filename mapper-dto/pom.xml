@@ -33,12 +33,12 @@
                             <schemaIncludes>
                                 <include>integrationAPICorp.xsd</include>
                             </schemaIncludes>
-                            <generatePackage>com.sbt.prb.ucpcb.dto</generatePackage>
+                            <generatePackage>com.test.dto</generatePackage>
                             <generateDirectory>${project.build.directory}/generated-sources/xjc-dto</generateDirectory>
                             <strict>false</strict>
                             <extension>true</extension>
 
-                            <args>
+                            <!--<args>
                                 <arg>-Xnamespace-prefix</arg>
                                 <arg>-Xfluent-api</arg>
                                 <arg>-Xvalue-constructor</arg>
@@ -57,7 +57,7 @@
                                     <groupId>com.github.krasa</groupId>
                                     <artifactId>krasa-jaxb-tools</artifactId>
                                 </plugin>
-                            </plugins>
+                            </plugins>-->
                         </configuration>
                     </execution>
                 </executions>

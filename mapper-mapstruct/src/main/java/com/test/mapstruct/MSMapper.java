@@ -1,7 +1,10 @@
 package com.test.mapstruct;
 
+import com.test.dto.PersonType;
 import com.test.mapper.Person;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 /**
@@ -10,7 +13,10 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface MSMapper {
 
-    MSMapper MAPPER = Mappers.getMapper(MSMapper.class);
+    MSMapper INSTANCE = Mappers.getMapper(MSMapper.class);
 
-//    Person jaxbPersion2OPersonDAO(PersonType in)
+    @Mappings({
+            @Mapping(source = "firstName", target = "FirstName")
+    })
+    Person jaxbPersion2OPersonDAO(PersonType in);
 }

@@ -4,8 +4,8 @@
            xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" elementFormDefault="qualified"
            attributeFormDefault="unqualified" jxb:version="1.0" jxb:extensionBindingPrefixes="xjc">
 
-    <xs:element name="Person" type="Person"/>
-    <xs:complexType name="Person">
+    <xs:element name="Person" type="Person_Type"/>
+    <xs:complexType name="Person_Type">
         <xs:sequence>
             <xs:element name="FirstName" type="xs:string"/>
             <xs:element name="birthDate" type="xs:date"/>
@@ -14,8 +14,8 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="Address" type="Address"/>
-    <xs:complexType name="Address">
+    <xs:element name="Address" type="Address_Type"/>
+    <xs:complexType name="Address_Type">
         <xs:sequence>
             <xs:element name="town" type="xs:string"/>
             <xs:element name="street" type="xs:string"/>
