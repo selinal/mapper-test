@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by KES (SBRF) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" elementFormDefault="qualified"
+           attributeFormDefault="unqualified" jxb:version="1.0" jxb:extensionBindingPrefixes="xjc">
+
+    <xs:element name="Person" type="Person"/>
+    <xs:complexType name="Person">
+        <xs:sequence>
+            <xs:element name="FirstName" type="xs:string"/>
+            <xs:element name="birthDate" type="xs:date"/>
+            <xs:element ref="Address" maxOccurs="unbounded"/>
+            <xs:element name="snils" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Address" type="Address"/>
+    <xs:complexType name="Address">
+        <xs:sequence>
+            <xs:element name="town" type="xs:string"/>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="house" type="xs:string"/>
+            <xs:element name="postCode" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
